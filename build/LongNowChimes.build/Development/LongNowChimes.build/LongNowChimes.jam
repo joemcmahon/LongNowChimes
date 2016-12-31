@@ -1,0 +1,106 @@
+# Jamfile for configuration Development of target "LongNowChimes" of project "LongNowChimes"
+
+
+JAVAC_SOURCE_FILE_ENCODING default = MacRoman ;
+
+# Implicitly computed project-wide settings for project "LongNowChimes"
+export deferred ANTICIPATED_BUILT_PRODUCTS_DIR = $(CONFIGURATION_BUILD_DIR) ;
+export deferred ANTICIPATED_TARGET_BUILD_DIR = $(CONFIGURATION_BUILD_DIR) ;
+export deferred BUILD_STYLE = "$(CONFIGURATION)" ;
+export deferred CONFIGURATION = Development ;
+export deferred CONFIGURATION_BUILD_DIR = $(BUILD_DIR)/$(CONFIGURATION) ;
+export deferred CONFIGURATION_TEMP_DIR = $(PROJECT_TEMP_DIR)/$(CONFIGURATION) ;
+export deferred DEVELOPMENT_LANGUAGE = English ;
+export deferred GROUP = mcmahon ;
+export deferred PROJECT = $(PROJECT_NAME) ;
+export deferred PROJECT_DIR = /Users/mcmahon/Development/Applescript/LongNowChimes ;
+export deferred PROJECT_FILE_PATH = /Users/mcmahon/Development/Applescript/LongNowChimes/LongNowChimes.xcodeproj ;
+export deferred PROJECT_NAME = LongNowChimes ;
+export deferred PROJECT_TEMP_DIR = $(OBJROOT)/$(PROJECT_NAME).build ;
+export deferred SRCROOT = /Users/mcmahon/Development/Applescript/LongNowChimes ;
+export deferred TARGET_TEMP_DIR = $(CONFIGURATION_TEMP_DIR)/$(TARGET_NAME).build ;
+export deferred TEMP_DIR = $(TARGET_TEMP_DIR) ;
+export deferred USER = mcmahon ;
+
+# Project-wide settings for project "LongNowChimes"
+
+# User-defined project-wide settings for project "LongNowChimes"
+
+# Build Settings for target "LongNowChimes"
+
+export deferred _INFO_PLIST_FILE_PATH = "$(TARGET_TEMP_DIR)/Info.plist" ;
+export deferred _PKGINFO_FILE_PATH = "$(TARGET_TEMP_DIR)/PkgInfo" ;
+export deferred _PBDEVELOPMENT_PLIST_FILE_PATH = "$(TARGET_TEMP_DIR)/pbdevelopment.plist" ;
+
+# Implicitly computed build settings for target "LongNowChimes"
+export deferred CLONE_HEADERS = NO ;
+export deferred PFE_FILE_C_DIALECTS = objective-c ;
+export deferred TARGETNAME = $(TARGET_NAME) ;
+export deferred TARGET_NAME = LongNowChimes ;
+
+# User-defined build settings for target "LongNowChimes"
+export deferred COPY_PHASE_STRIP = NO ;
+export deferred FRAMEWORK_SEARCH_PATHS =  ;
+export deferred GCC_DYNAMIC_NO_PIC = NO ;
+export deferred GCC_ENABLE_FIX_AND_CONTINUE = YES ;
+export deferred GCC_GENERATE_DEBUGGING_SYMBOLS = YES ;
+export deferred GCC_OPTIMIZATION_LEVEL = 0 ;
+export deferred HEADER_SEARCH_PATHS =  ;
+export deferred INSTALL_PATH = "$(HOME)/Applications" ;
+export deferred LIBRARY_SEARCH_PATHS =  ;
+export deferred OPTIMIZATION_CFLAGS = -O0 ;
+export deferred OTHER_CFLAGS =  ;
+export deferred OTHER_LDFLAGS =  ;
+export deferred PRODUCT_NAME = LongNowChimes ;
+export deferred SECTORDER_FLAGS =  ;
+export deferred WARNING_CFLAGS = -Wmost -Wno-four-char-constants -Wno-unknown-pragmas ;
+export deferred WRAPPER_EXTENSION = app ;
+export deferred ZERO_LINK = YES ;
+
+# Target "LongNowChimes"
+
+ConditionalDefinitions _ ;
+commitdeferred ;
+
+
+BeginApplication "<LongNowChimes>LongNowChimes.app" ;
+
+# Headers
+HEADERS = ;
+ProcessHeaders "<LongNowChimes>LongNowChimes.app" : "$(HEADERS)" : "" : BPTag000 ;
+
+# AppleScripts
+/Users/joe/Development/LongNowChimes/LongNowChimes.applescript_ATTRIBUTES = Debug AbsolutePath ;
+APPLESCRIPTS = /Users/joe/Development/LongNowChimes/LongNowChimes.applescript ;
+CONTEXTNAME = "" ;
+ProcessApplescripts "<LongNowChimes>LongNowChimes.app" : "$(APPLESCRIPTS)" : BPTag000 : BPTag001 ;
+
+# Resources
+English.lproj/MainMenu.nib_REGION = English ;
+English.lproj/InfoPlist.strings_REGION = English ;
+RESOURCES =
+	English.lproj/MainMenu.nib
+	English.lproj/InfoPlist.strings
+	LongNowChimes.icns
+	chuck
+	LongNowPlayer.ck
+	PealHeader.ck
+	PealTrailer.ck ;
+ProcessResources "<LongNowChimes>LongNowChimes.app" : "$(RESOURCES)" : BPTag001 : BPTag002 ;
+
+# Sources
+main.m_ATTRIBUTES = ;
+SOURCES = main.m ;
+ProcessSources "<LongNowChimes>LongNowChimes.app" : "$(SOURCES)" : BPTag002 : BPTag003 ;
+
+# Frameworks & Libraries
+/System/Library/Frameworks/Cocoa.framework_ATTRIBUTES = AbsolutePath ;
+/System/Library/Frameworks/AppleScriptKit.framework_ATTRIBUTES = AbsolutePath ;
+FRAMEWORKS_AND_LIBRARIES =
+	/System/Library/Frameworks/Cocoa.framework
+	/System/Library/Frameworks/AppleScriptKit.framework ;
+ProcessFrameworksAndLibraries "<LongNowChimes>LongNowChimes.app" : "$(FRAMEWORKS_AND_LIBRARIES)" : BPTag003 : BPTag004 ;
+
+include $(TEMP_DIR)/HeaderDependencies.jam ;
+EndApplication "<LongNowChimes>LongNowChimes.app" ;
+
